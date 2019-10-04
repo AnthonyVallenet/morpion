@@ -2,9 +2,6 @@ var boxes = document.querySelectorAll('.boxe');
 
 var inputP1 = document.getElementById("inputP1");
 var inputP2 = document.getElementById("inputP2");
-var inputF = document.getElementById("inputFile");
-
-var imgFile = document.getElementById("imgFile");
 
 var afficheScorePlayer1 = document.getElementById("scorePlayer1");
 var afficheScorePlayer2 = document.getElementById("scorePlayer2");
@@ -46,10 +43,6 @@ function afficheName() {
     }
     nbrTour.innerHTML = inputRound.value;
     maxScore = inputRound.value;
-
-    console.log(inputF.files[0]);
-    imgFile.src = 0;
-    console.log(imgFile);
 }
 
 function recupInput() {
