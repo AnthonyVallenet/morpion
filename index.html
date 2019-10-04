@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>morpion</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/css/style.min.css">
+    </head>
+    <body onkeydown="keyCode(event)">
+
+        <section id="sectionName" class="name">
+            <div>
+                <form class="" action="index.html" method="post">
+                    <div>
+                        <div>
+                            <label for="player1">Player 1 :</label>
+                            <input type="text" id="inputP1" name="player1" value="" required>
+                        </div>
+                        <div>
+                            <label for="player1">Player 2 :</label>
+                            <input type="text" id="inputP2" name="player2" value="" required>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="nombreTour">Nombre de point :</label>
+                        <input id="inputRound" name="nombreTour" type="number" min="1" max="5" value="3">
+                    </div>
+
+                    <div>
+                        <input type="file" id="inputFile" name="inputFile" accept="image/png, image/jpeg">
+                    </div>
+
+                    <div>
+                        <button type="button" name="button" onclick="recupInput()">go</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section id="sectionWin" class="win">
+            <div>
+
+                <div>
+                    <p>Le gagnant est : <span id="winner"></span></p>
+                </div>
+
+                <div>
+                    <button type="button" name="button" onClick="document.location.reload(true)">Reset Game</button>
+                    <button type="button" name="button" onclick="resetScore()">Reset Score</button>
+                </div>
+
+            </div>
+        </section>
+
+        <main>
+
+            <section class="score">
+                <div class="bloc">
+                    <div>
+                        <p>Nombre de point :</p>
+                        <p id="nbrTour"></p>
+                    </div>
+                    <div>
+                        <div class="scorePlayer">
+                            <p>Player 1 :</p>
+                            <div>
+                                <p id="player1"></p>
+                                <span id="scorePlayer1">0</span>
+                            </div>
+                        </div>
+
+                        <div></div>
+
+                        <div class="scorePlayer">
+                            <p>Player 2 :</p>
+                            <div>
+                                <p id="player2"></p>
+                                <span id="scorePlayer2">0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="morpion">
+                <div>
+                    <div class="boxe"></div>
+                    <div class="boxe"></div>
+                    <div class="boxe"></div>
+                    <div class="boxe"></div>
+                    <div class="boxe"></div>
+                    <div class="boxe"></div>
+                    <div class="boxe"></div>
+                    <div class="boxe"></div>
+                    <div class="boxe"></div>
+                </div>
+            </section>
+            <img id="imgFile" src="" alt="">
+        </main>
+
+        <footer>
+            <button type="button" name="button" onClick="document.location.reload(true)">Reset Game</button>
+            <button type="button" name="button" onclick="resetScore()">Reset Score</button>
+        </footer>
+
+        <script src="js/script.js" charset="utf-8"></script>
+    </body>
+</html>
